@@ -12,7 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "prepublishOnly": "npm run build && npm run test",
-    "build:action": "npm run build && ncc build dist/cli/index.js -o action-dist"
+    "build:action": "npm run build && ncc build dist/action.js -o action-dist"
   },
   "repository": {
     "type": "git",
