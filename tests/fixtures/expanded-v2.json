@@ -1,0 +1,27 @@
+{
+  "format": "mcp-capability-snapshot",
+  "formatVersion": 1,
+  "server": { "name": "test-server", "version": "2.0.0" },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "execute_shell",
+        "description": "Runs a command",
+        "inputSchema": { "type": "object" }
+      },
+      {
+        "name": "read_file",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": { "type": "string" }
+          },
+          "required": ["path"]
+        }
+      }
+    ],
+    "resources": [],
+    "resourceTemplates": [],
+    "prompts": []
+  }
+}

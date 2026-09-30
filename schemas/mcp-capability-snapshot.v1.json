@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mcpspec.io/mcp-capability-snapshot.v1.json",
+  "title": "McpCapabilitySnapshot",
+  "type": "object",
+  "required": ["format", "formatVersion", "server", "capabilities"],
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "type": "string",
+      "const": "mcp-capability-snapshot"
+    },
+    "formatVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "server": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["static", "introspection"]
+        },
+        "capturedAt": { "type": "string" },
+        "transport": { "type": "string" }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["tools", "resources", "resourceTemplates", "prompts"],
+      "additionalProperties": false,
+      "properties": {
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "inputSchema"],
+            "additionalProperties": true,
+            "properties": {
+              "name": { "type": "string" },
+              "description": { "type": "string" },
+              "inputSchema": { "type": "object" }
+            }
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "resourceTemplates": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "prompts": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "rules": [
+    {
+      "id": "RULE_EXECUTION_CAPABILITY",
+      "type": "KEYWORD_EXPANSION",
+      "level": "CRITICAL",
+      "patterns": ["\\b(exec\\w*|shell|bash|cmd|run_command|eval)\\b"],
+      "message": "Introduces terminology associated with arbitrary code or command execution."
+    },
+    {
+      "id": "RULE_FS_MUTATION",
+      "type": "KEYWORD_EXPANSION",
+      "level": "HIGH",
+      "patterns": ["\\b(write_file|delete_file|overwrite|patch_file|chmod)\\b"],
+      "message": "Introduces terminology associated with filesystem mutation."
+    },
+    {
+      "id": "RULE_NETWORK_OUTBOUND",
+      "type": "KEYWORD_EXPANSION",
+      "level": "MEDIUM",
+      "patterns": ["\\b(fetch|http_request|curl|webhook)\\b"],
+      "message": "Introduces terminology associated with network access."
+    }
+  ]
+}

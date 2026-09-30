@@ -1,0 +1,14 @@
+{
+  "format": "mcp-capability-snapshot",
+  "formatVersion": 1,
+  "server": {
+    "name": "test-server",
+    "version": "1.0.0"
+  },
+  "capabilities": {
+    "tools": [],
+    "resources": [],
+    "resourceTemplates": [],
+    "prompts": []
+  }
+}

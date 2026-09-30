@@ -1,0 +1,31 @@
+name: MCP Capability Diff
+description: Detect MCP capability changes and assess their risk
+author: h4rshxd
+
+inputs:
+  old-snapshot:
+    description: Path to the old MCP capability snapshot JSON
+    required: true
+  new-snapshot:
+    description: Path to the new MCP capability snapshot JSON
+    required: true
+  format:
+    description: Output format: text, json, or sarif
+    required: false
+    default: sarif
+  fail-on:
+    description: Risk threshold that causes a non-zero exit
+    required: false
+    default: high
+  explain:
+    description: Include rule evidence in text output
+    required: false
+    default: "false"
+  quiet:
+    description: Suppress text output
+    required: false
+    default: "false"
+
+runs:
+  using: node24
+  main: action-dist/index.js
