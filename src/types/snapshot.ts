@@ -11,11 +11,17 @@ export interface McpTool {
 
 export interface McpResource {
   uri: string;
+  name?: string;
+  description?: string;
+  mimeType?: string;
   [key: string]: unknown;
 }
 
 export interface McpResourceTemplate {
   uriTemplate: string;
+  name?: string;
+  description?: string;
+  mimeType?: string;
   [key: string]: unknown;
 }
 
