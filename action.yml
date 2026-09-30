@@ -10,7 +10,7 @@ inputs:
     description: Path to the new MCP capability snapshot JSON
     required: true
   format:
-    description: Output format: text, json, or sarif
+    description: "Output format: text, json, or sarif"
     required: false
     default: sarif
   fail-on:
