@@ -1,6 +1,6 @@
 {
   "name": "mcp-capability-diff",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Capability-change detection and risk-review tool for MCP servers",
   "type": "module",
   "main": "dist/index.js",
@@ -22,9 +22,11 @@
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "commander": "^15.0.0",
+    "js-yaml": "^5.4.2",
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^26.6.3",
     "@vercel/ncc": "^0.45.0",
     "typescript": "^5.9.3",
