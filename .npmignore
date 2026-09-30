@@ -1,0 +1,7 @@
+src/
+tests/
+.github/
+action-dist/
+tsconfig.json
+vitest.config.ts
+.gitignore
